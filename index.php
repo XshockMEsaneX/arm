@@ -1,51 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-     <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <title>Anthony R. Morrow</title>
-       <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <?php wp_head(); ?>
-  </head>
-  <body>
-
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Anthony R. Morrow</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Family Law</a></li>
-            <li><a href="#">Criminal</a></li>
-            <li><a href="#">Traffic Offenses</a></li>
-            <li><a href="#">DWI</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Payments</a></li>
-          </ul>
-            <p class="hidden-xs pull-right navbar-text">828.351.7100</p>
-        </div><!--/.nav-collapse -->
-      </div>
+<?php get_header(); ?>
     <div id="banner">
-        <img src="img/arm-cropped.jpg" class="img-responsive">
+        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/arm-cropped.jpg" class="img-responsive">
         </div>
      
         <div id="title" class="row">
@@ -82,7 +37,7 @@
           </div>
         <div class="row">
           <div class="col-md-6">
-            <img src="img/arm3.jpg" class="img-responsive">
+            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/arm3.jpg" class="img-responsive">
             </div>
           <div id="map-canvas" class="col-md-6"></div>
           </div>
@@ -113,28 +68,4 @@
               </div>
           </div>
       </div>
-
-      <footer>
-      <div class="container">
-          <p class="text-center">Law Offices of Anthony R. Morrow, all rights reserved</p>
-      <p class="text-center">217 Gilkey School Rood, Rutherfordton, NC 28139. (828) 351-7100</p>
-          <p>The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation. I invite you to contact me and I welcome your calls, letters and electronic mail. Contacting me does not create an attorney-client relationship. Please do not send any confidential information to me until such time as an attorney-client relationship has been established.</p>
-          </div>
-      </footer>
-
-      <script>
-      function initialize() {
-        var map_canvas = document.getElementById('map-canvas');
-        var map_options = {
-          center: new google.maps.LatLng(35.447277, -81.983982),
-          zoom: 10,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(map_canvas, map_options)
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-
-    <?php wp_footer(); ?>
-  </body>
-</html>
+<?php get_footer(); ?>
