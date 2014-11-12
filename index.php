@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,27 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
- <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <title>Anthony R. Morrow</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <?php wp_head(); ?>
   </head>
-
   <body>
 
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -133,13 +121,7 @@
           <p>The information you obtain at this site is not, nor is it intended to be, legal advice. You should consult an attorney for advice regarding your individual situation. I invite you to contact me and I welcome your calls, letters and electronic mail. Contacting me does not create an attorney-client relationship. Please do not send any confidential information to me until such time as an attorney-client relationship has been established.</p>
           </div>
       </footer>
-      
-      
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
       <script>
       function initialize() {
         var map_canvas = document.getElementById('map-canvas');
@@ -152,5 +134,7 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+
+    <?php wp_footer(); ?>
   </body>
 </html>
